@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<Pane fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" type="Pane" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <Pane layoutY="74.0" prefHeight="120.0" prefWidth="600.0">
          <children>
@@ -26,22 +25,22 @@
                 <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="7" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="4" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="1" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="0" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="8" GridPane.columnIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="9" GridPane.columnIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="/" GridPane.columnIndex="3" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="btn_num7" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="7" />
+                  <Button fx:id="btn_num4" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="4" GridPane.rowIndex="1" />
+                  <Button fx:id="btn_num1" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="1" GridPane.rowIndex="2" />
+                  <Button fx:id="btn_num0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="0" GridPane.rowIndex="3" />
+                  <Button fx:id="btn_num8" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="8" GridPane.columnIndex="1" />
+                  <Button fx:id="btn_num5" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="btn_num2" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="btn_Decimal" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="." GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="btn_num9" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="9" GridPane.columnIndex="2" />
+                  <Button fx:id="btn_num6" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button fx:id="btn_num3" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button fx:id="btn_percent" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button fx:id="btn_division" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="/" GridPane.columnIndex="3" />
+                  <Button fx:id="btn_multiply" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button fx:id="btn_subtract" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button fx:id="btn_addition" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                </children>
             </GridPane>
             <Pane layoutX="410.0" layoutY="2.0" prefHeight="120.0" prefWidth="0.0">
@@ -57,12 +56,12 @@
                       <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="DEL" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="CLEAR" GridPane.columnIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="(" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text=")" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="^2" GridPane.rowIndex="2" />
-                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="sqr" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="btn_delete" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="DEL" />
+                        <Button fx:id="btn_clear" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="CLEAR" GridPane.columnIndex="1" />
+                        <Button fx:id="btn_openPar" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="(" GridPane.rowIndex="1" />
+                        <Button fx:id="btn_closePar" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text=")" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="btn_power2" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="^2" GridPane.rowIndex="2" />
+                        <Button fx:id="btn_sqr" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="sqr" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                   <GridPane hgap="1.5" layoutY="94.0" prefHeight="30.0" prefWidth="200.0" vgap="1.5">
@@ -73,7 +72,7 @@
                       <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button layoutX="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="=" />
+                        <Button fx:id="btn_equals" layoutX="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="=" />
                      </children>
                   </GridPane>
                </children>
@@ -82,4 +81,4 @@
       </Pane>
       <TextArea layoutX="10.0" layoutY="16.0" prefHeight="57.0" prefWidth="600.0" />
    </children>
-</Pane>
+</fx:root>
