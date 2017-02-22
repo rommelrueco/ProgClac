@@ -6,6 +6,7 @@ import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class Controller implements EventHandler {
 
@@ -14,7 +15,8 @@ public class Controller implements EventHandler {
             btn_decimal,btn_percent,btn_division,btn_multiply,btn_subtract,btn_addition;
 
     //Declaration of IO
-    public TextArea txt_Display, txt_DisplayOutput;
+    public TextArea txt_Display;
+    public TextField txt_DisplayOutput;
 
     //Declaration of Factory
     KeyValue keyValue = new KeyValue();
@@ -69,8 +71,5 @@ public class Controller implements EventHandler {
             throw e;
         }
     }
-
-
-
 }
 
