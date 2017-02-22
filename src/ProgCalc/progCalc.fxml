@@ -72,7 +72,7 @@
                       <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btn_equals" layoutX="388.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="200.0" text="=" />
+                        <Button fx:id="btn_equals" layoutX="388.0" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="200.0" text="=" />
                      </children>
                   </GridPane>
                </children>
@@ -80,6 +80,6 @@
          </children>
       </Pane>
       <TextArea fx:id="txt_Display" editable="false" layoutX="10.0" layoutY="16.0" onKeyPressed="#handle" prefHeight="57.0" prefWidth="600.0" />
-      <TextArea fx:id="txt_DisplayOutput" layoutX="11.0" layoutY="76.0" prefHeight="15.0" prefWidth="600.0" />
+      <TextArea fx:id="txt_DisplayOutput" style="fx-text-alignment: right" editable="false" layoutX="11.0" layoutY="76.0" onKeyPressed="#handle" prefHeight="15.0" prefWidth="600.0" />
    </children>
 </Pane>
