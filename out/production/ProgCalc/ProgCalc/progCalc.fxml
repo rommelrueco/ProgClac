@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -10,9 +7,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProgCalc.Controller">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProgCalc.Controller">
    <children>
-      <Pane layoutY="74.0" prefHeight="120.0" prefWidth="600.0">
+      <Pane layoutY="118.0" prefHeight="120.0" prefWidth="600.0">
          <children>
             <GridPane hgap="1.5" layoutX="8.0" layoutY="5.0" prefHeight="120.0" prefWidth="400.0" vgap="1.5">
               <columnConstraints>
@@ -59,12 +56,12 @@
                       <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Button fx:id="btn_delete" onAction="#handle" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="DEL" />
-                        <Button fx:id="btn_clear" onAction="#handle" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="CLEAR" GridPane.columnIndex="1" />
-                        <Button fx:id="btn_openPar" onAction="#handle" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="(" GridPane.rowIndex="1" />
-                        <Button fx:id="btn_closePar" onAction="#handle" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text=")" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Button fx:id="btn_power2" onAction="#handle" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="^2" GridPane.rowIndex="2" />
-                        <Button fx:id="btn_sqr" onAction="#handle" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="sqr" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button fx:id="btn_delete" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="100.0" text="DEL" />
+                        <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="100.0" text="CLEAR" GridPane.columnIndex="1" />
+                        <Button fx:id="btn_openPar" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="100.0" text="(" GridPane.rowIndex="1" />
+                        <Button fx:id="btn_closePar" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="100.0" text=")" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button fx:id="btn_power2" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="100.0" text="^2" GridPane.rowIndex="2" />
+                        <Button fx:id="btn_sqr" mnemonicParsing="false" onAction="#handle" prefHeight="30.0" prefWidth="100.0" text="sqr" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                   <GridPane hgap="1.5" layoutY="94.0" prefHeight="30.0" prefWidth="200.0" vgap="1.5">
@@ -83,5 +80,6 @@
          </children>
       </Pane>
       <TextArea fx:id="txt_Display" editable="false" layoutX="10.0" layoutY="16.0" onKeyPressed="#handle" prefHeight="57.0" prefWidth="600.0" />
+      <TextArea fx:id="txt_DisplayOutput" layoutX="11.0" layoutY="76.0" prefHeight="15.0" prefWidth="600.0" />
    </children>
 </Pane>
