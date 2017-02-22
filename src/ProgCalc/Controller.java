@@ -1,6 +1,5 @@
 package ProgCalc;
 
-import ArithemeticExpressions.CheckInteger;
 import ArithemeticExpressions.Operations;
 import Factory.*;
 import javafx.event.Event;
@@ -15,11 +14,10 @@ public class Controller implements EventHandler {
             btn_decimal,btn_percent,btn_division,btn_multiply,btn_subtract,btn_addition;
 
     //Declaration of IO
-    public TextArea txt_Display;
+    public TextArea txt_Display, txt_DisplayOutput;
 
     //Declaration of Factory
     KeyValue keyValue = new KeyValue();
-    Operator operator = new Operator();
     Input input = new Input();
 
     //Declaration of Arithmetic Expressions
@@ -27,43 +25,49 @@ public class Controller implements EventHandler {
 
     @Override
     public void handle(Event event) {
-        //Set Value From Event
-        keyValue.setKeyValue(event);
+        try {
 
-        //Retrieve Value From Event
-        String val = keyValue.getKeyValue();
+            //Set Value From Event
+            keyValue.setKeyValue(event);
 
-        //Check Value if number
-        if(CheckInteger.checkNum(val)) {
-            txt_Display.setText(txt_Display.getText() + val);
-        }
-        //Check Decimal
-        else if(val.equals(".")) {
-            txt_Display.setText(txt_Display.getText() + val);
-        }
+            //Retrieve Value From Event
+            String val = keyValue.getKeyValue();
 
-        // Check Operator
-        else if(val.equals("+")  || val.equals("-") || val.equals("x")
-                || val.equals("/")){
+            //Check Key Pressed
+            if(val.equals("R")) {
 
-            if(input.getInput() == "" || input.getInput() == null) {
-                //Set Temporary Input
-                input.setInput(txt_Display.getText());
-                //Set Operator
-                operator.setOperator(val);
-                //Clear Text
+                //Clear Values
+                input.setInput("");
                 txt_Display.setText("");
-            }else{
-                //Set Computed Output
-                input.setInput(operations.Operations(val,input.getInput(),txt_Display.getText()));
-                txt_Display.setText(input.getInput());
-            }
-        }
-        else if(val.equals("R")){
-            txt_Display.setText("");
-            operator.setOperator("");
-        }
+                txt_DisplayOutput.setText("");
 
+            }else if(val.equals("=")){
+                //Clear Container
+                operations.listNum.removeAll(operations.listNum);
+
+                //Set Equation
+                input.setInput(txt_Display.getText());
+
+                //Process Algorithm
+                txt_DisplayOutput.setText(operations.Operations(input.getInput() + "="));
+
+                //Clear Text box
+                txt_Display.setText("");
+
+            }else if(val.equals("L")){
+
+                //Delete Last Inputted Value
+                txt_Display.setText(txt_Display.getText().substring(0,txt_Display.getText().length() - 1));
+            }
+            else{
+                //Get pressed key Value
+                txt_Display.setText(txt_Display.getText() + val);
+            }
+        }catch (Exception e)
+        {
+            txt_DisplayOutput.setText("Syntax Error");
+            throw e;
+        }
     }
 
 
