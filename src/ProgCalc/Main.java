@@ -1,4 +1,4 @@
-package sample;
+package ProgCalc;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -10,6 +10,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
         Parent root = FXMLLoader.load(getClass().getResource("progCalc.fxml"));
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 620, 250));
@@ -18,6 +19,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
+
         launch(args);
     }
 }
